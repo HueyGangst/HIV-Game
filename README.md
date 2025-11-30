@@ -69,4 +69,5 @@ Este projeto é de livre uso para fins educativos. Sinta-se à vontade para comp
 
 ---
 
-Desenvolvido por **[Seu Nome]** em apoio ao Dezembro Vermelho. 🎗️
+Desenvolvido por **Davi Damsceno** em apoio ao Dezembro Vermelho. 🎗️
+
