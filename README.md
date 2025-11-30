@@ -1,4 +1,4 @@
-# 🎗️ Decifra: Dezembro Vermelho
+# 🎗️ Decifre: Dezembro Vermelho
 
 > Um jogo educativo de raciocínio lógico focado na conscientização, prevenção e tratamento do HIV/AIDS.
 
@@ -68,4 +68,5 @@ O jogo ensina sobre:
 Este projeto é de livre uso para fins educativos. Sinta-se à vontade para compartilhar e contribuir.
 
 ---
+
 Desenvolvido por **[Seu Nome]** em apoio ao Dezembro Vermelho. 🎗️
