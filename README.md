@@ -24,9 +24,7 @@ O objetivo do jogo é **gamificar o aprendizado**: o jogador assume o papel de u
 ## 🚀 Demonstração (Live Demo)
 
 Você pode jogar a versão online aqui:
-🔗 **[INSIRA O LINK DO SEU GITHUB PAGES AQUI]**
-
-*(Exemplo: https://seu-usuario.github.io/dezembro-vermelho)*
+🔗 **https://hueygangst.github.io/HIV-Game/**
 
 ## 🧩 Como Jogar
 
@@ -53,7 +51,7 @@ Se você quiser rodar este projeto no seu computador:
     git clone [https://github.com/SEU-USUARIO/NOME-DO-REPO.git](https://github.com/SEU-USUARIO/NOME-DO-REPO.git)
     ```
 2.  Acesse a pasta do projeto.
-3.  Abra o arquivo `index.html` em qualquer navegador moderno (Chrome, Firefox, Edge).
+3.  Abra o arquivo `index.html` em qualquer navegador moderno.
 
 ## 🎓 Conceitos Abordados
 
@@ -70,4 +68,5 @@ Este projeto é de livre uso para fins educativos. Sinta-se à vontade para comp
 ---
 
 Desenvolvido por **Davi Damsceno** em apoio ao Dezembro Vermelho. 🎗️
+
 
