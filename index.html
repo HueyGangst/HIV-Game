@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Decifra: Dezembro Vermelho</title>
+    <!-- Garanta que o arquivo style.css está dentro da pasta 'css' -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <canvas id="confetti-canvas"></canvas>
+
+    <div class="header-bar">
+        <div class="player-info">👤 <span id="display-name">Jogador</span></div>
+        <div class="timer-wrapper">
+            <div id="timer-bar" class="timer-fill"></div>
+        </div>
+        <div style="min-width: 30px; text-align: right;"><span id="timer-text">00</span>s</div>
+    </div>
+
+    <div class="game-container">
+        <div id="category-badge" class="category-badge">CATEGORIA</div>
+
+        <div class="reference-box">
+            <div class="ref-title">TABELA DE CÓDIGOS</div>
+            <div id="ref-grid" class="ref-grid"></div>
+        </div>
+
+        <div class="puzzle-area">
+            <div id="puzzle-board"></div>
+            <div id="keyboard" class="keyboard"></div>
+        </div>
+    </div>
+
+    <!-- TELA INICIAL -->
+    <div id="screen-start" class="overlay" style="display: flex;">
+        <div class="modal">
+            <h1 style="color:var(--primary); margin-bottom: 5px;">DEZEMBRO VERMELHO</h1>
+            <p style="margin-top: 0; color: #666;">Decifre a prevenção.</p>
+
+            <div style="margin: 20px 0;">
+                <label style="display:block; margin-bottom: 5px; font-weight: bold;">SEU NOME:</label>
+                <input type="text" id="input-nickname" class="nickname-input" placeholder="DIGITE AQUI" maxlength="12">
+            </div>
+
+            <div style="background: #eee; padding: 10px; border-radius: 5px; font-size: 0.9rem;">
+                🎯 <strong>Missão:</strong> Traduzir os códigos.<br>
+                📱 <strong>Dica:</strong> Arraste a tabela para ver mais.
+            </div>
+            <button class="btn-main" onclick="validateAndStart()">ENTRAR NA MISSÃO</button>
+        </div>
+    </div>
+
+    <!-- TELA FEEDBACK -->
+    <div id="screen-feedback" class="overlay">
+        <div class="modal">
+            <h2 id="fb-title" style="color: #2a9d8f;">MUITO BEM!</h2>
+            <div class="info-box">
+                <strong id="fb-word" style="font-size: 1.1rem; display:block; margin-bottom:5px;">PALAVRA</strong>
+                <span id="fb-desc" style="font-size: 0.95rem;">Explicação.</span>
+            </div>
+            <button class="btn-main" onclick="nextLevel()">PRÓXIMA PALAVRA</button>
+        </div>
+    </div>
+
+    <!-- TELA GAME OVER -->
+    <div id="screen-gameover" class="overlay">
+        <div class="modal">
+            <h1 style="color:var(--primary)">TEMPO ESGOTADO</h1>
+            <p>Não desista, <span class="player-name-span"></span>!</p>
+            <p>A palavra era:</p>
+            <h2 id="go-word" style="background:#eee; padding:5px;">...</h2>
+            <p id="go-desc" style="font-size: 0.9rem; color: #666;"></p>
+            <button class="btn-main" onclick="location.reload()">TENTAR NOVAMENTE</button>
+        </div>
+    </div>
+
+    <!-- TELA VITÓRIA (Versão Final com Placar) -->
+    <div id="screen-win" class="overlay">
+        <div class="modal">
+            <h1>🏆 PARABÉNS!</h1>
+            <h3 style="color:var(--accent); margin-bottom: 5px;"><span class="player-name-span"></span></h3>
+            <p style="margin-top: 0;">Você domina a prevenção!</p>
+            
+            <!-- ÁREA DE ESTATÍSTICAS -->
+            <div style="background: #f0f4f8; padding: 15px; border-radius: 10px; margin: 15px 0; display: flex; justify-content: space-around; border: 2px solid #e0e0e0;">
+                <div>
+                    <div style="font-size: 0.8rem; color: #666; font-weight: bold;">PONTUAÇÃO</div>
+                    <div id="final-score" style="font-size: 1.8rem; font-weight: bold; color: var(--primary);">0</div>
+                </div>
+                <div style="border-left: 2px solid #ccc;"></div>
+                <div>
+                    <div style="font-size: 0.8rem; color: #666; font-weight: bold;">TEMPO TOTAL</div>
+                    <div id="final-time" style="font-size: 1.8rem; font-weight: bold; color: var(--accent);">00:00</div>
+                </div>
+            </div>
+
+            <button class="btn-main" onclick="location.reload()">JOGAR NOVAMENTE</button>
+            <button class="btn-main btn-share" onclick="shareResult()">📲 COMPARTILHAR RESULTADO</button>
+        </div>
+    </div>
+
+    <!-- Garanta que o arquivo game.js está dentro da pasta 'js' -->
+    <script src="js/game.js"></script>
+
+</body>
+</html>
